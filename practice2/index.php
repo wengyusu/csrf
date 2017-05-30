@@ -1,9 +1,11 @@
-<?php require_once "config.php"; ?>
+<?php require_once "config.php";
+assert(isset($_SESSION['username']),"no login");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>GET CSRF</title>
+    <title>POST CSRF</title>
     <!-- Custom styles for this template -->
     <link href="../assets/css/typo.css" rel="stylesheet">    
     <link href="../assets/css/changeV1.css" rel="stylesheet">
@@ -23,6 +25,7 @@
             <nav class="l">
                 <ul>
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
+                    <li class="firstNav"><a href="./logout.php">Logout</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>
