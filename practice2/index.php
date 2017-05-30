@@ -26,6 +26,7 @@ assert(isset($_SESSION['username']),"no login");
                 <ul>
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
                     <li class="firstNav"><a href="./logout.php">Logout</a></li>
+                    <li class="firstNav"><a href="./reset.php">Reset password</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>

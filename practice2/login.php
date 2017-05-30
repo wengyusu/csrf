@@ -1,7 +1,7 @@
 <?php  require_once "config.php"; 
 assert($_SERVER['SCRIPT_NAME'] == "/csrf/practice2/login.php","assertion failed");
 assert(!isset($_SESSION['username']),"");
-echo $_SESSION['username'];
+// echo $_SESSION['username'];
 ?>
 <html>
       <head>
