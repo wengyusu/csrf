@@ -22,9 +22,13 @@ $content = "<html>
 // }
 // else
 //     echo "fatal error";
-// echo "python3 bot.py http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
-$status=system("python3 bot.py http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
-if($status == 'succeed')
+$filename="result/".md5(time()).".html";
+file_put_contents($filename,$content);
+echo "python3 bot.py http://{$_SERVER['HTTP_HOST']} {$filename}";
+@$status=system("python3 bot.py http://{$_SERVER['HTTP_HOST']} {$filename}");
+if($status == 'succeed'){
     echo $content;
+    unlink($filename);
+}
 else
     echo "Fatal error";
