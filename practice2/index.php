@@ -31,14 +31,8 @@ assert(isset($_SESSION['username']),"no login");
             </nav>
             <div class="line l"></div>
             <div class="box1 l">
-                <h1 class="text-left mt0">GET CSRF </h1>
+                <h1 class="text-left mt0">POST CSRF </h1>
                 <h3>Only the man who is admin can do something...</h3>
-                </br>
-                <h3>Input the content and admin will see:</h3>
-                <form action="result.php">
-                <textarea name="url" style="width:300px;height:100px;"></textarea>
-                 <input type="submit" value="submit">
-                </form>
             </div>
         </div>
          
@@ -50,4 +44,3 @@ assert(isset($_SESSION['username']),"no login");
     
   </body>
 </html>
-<!--flag.php-->

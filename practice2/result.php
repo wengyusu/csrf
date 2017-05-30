@@ -28,7 +28,7 @@ echo "python3 bot.py http://{$_SERVER['HTTP_HOST']} {$filename}";
 @$status=system("python3 bot.py http://{$_SERVER['HTTP_HOST']} {$filename}");
 if($status == 'succeed'){
     echo $content;
-    unlink($filename);
+    // unlink($filename);
 }
 else
     echo "Fatal error";

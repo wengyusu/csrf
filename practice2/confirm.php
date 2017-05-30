@@ -17,4 +17,3 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         die('Fatal error');
     }
 }
-assert(isset($_SESSION['username']),"");

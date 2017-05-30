@@ -1,1 +1,3 @@
+No permission
+flag{g3t_c3rf3e333}
 flag{g3t_c3rf3e333}
