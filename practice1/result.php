@@ -22,7 +22,8 @@ $content = "<html>
 // }
 // else
 //     echo "fatal error";
-$status=system("python3 bot.py {$filename}.html");
+// echo "python3 bot.py http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+$status=system("python3 bot.py http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
 if($status == 'succeed')
     echo $content;
 else
