@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>GET CSRF</title>
+    <title>POST CSRF</title>
     <!-- Custom styles for this template -->
     <link href="../assets/css/typo.css" rel="stylesheet">    
     <link href="../assets/css/changeV1.css" rel="stylesheet">
@@ -27,8 +27,8 @@
             </nav>
             <div class="line l"></div>
             <div class="box1 l">
-                <h1 class="text-left mt0">GET CSRF </h1>
-                <h3>Only the man who is admin can do something...</h3>
+                <h1 class="text-left mt0">POST CSRF </h1>
+                <h3>flag is at the same place as GET CSRF's</h3>
                 </br>
                 <h3>Input the content and admin will see:</h3>
                 <form action="result.php">
@@ -46,4 +46,3 @@
     
   </body>
 </html>
-<!--flag.php-->

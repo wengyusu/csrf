@@ -24,11 +24,12 @@ $content = "<html>
 //     echo "fatal error";
 $filename="result/".md5(time()).".html";
 file_put_contents($filename,$content);
-echo "python3 bot.py http://{$_SERVER['HTTP_HOST']} {$filename}";
-@$status=system("python3 bot.py http://{$_SERVER['HTTP_HOST']} {$filename}");
-if($status == 'succeed'){
+$dir=dirname($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+// echo "python3 bot.py http://{$dir} {$filename}";
+exec("python3 bot.py http://{$dir} {$filename}",$status);
+if($status[0] == 'succeed'){
     echo $content;
-    // unlink($filename);
+    unlink($filename);
 }
 else
     die("Fatal error");
