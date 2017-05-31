@@ -23,14 +23,16 @@
             <nav class="l">
                 <ul>
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
-                    <!--<details open>-->
-                         <!--<summary>Questions</summary>-->
-                    <li class="firstNav"><a href="upload.php">Upload</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>
             <div class="box1 l">
                 <h1 class="text-left mt0">CORS CSRF</h1>
+                <h3>Input the content and admin will see:</h3>
+                <form action="result.php">
+                <textarea name="url" style="width:300px;height:100px;"></textarea>
+                 <input type="submit" value="submit">
+                </form>
             </div>
         </div>
          
