@@ -1,11 +1,9 @@
-<?php require_once "config.php";
-assert(isset($_SESSION['username']),"no login");
-?>
+<?php require_once "config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>POST CSRF</title>
+    <title>GET CSRF</title>
     <!-- Custom styles for this template -->
     <link href="../assets/css/typo.css" rel="stylesheet">    
     <link href="../assets/css/changeV1.css" rel="stylesheet">
@@ -25,14 +23,18 @@ assert(isset($_SESSION['username']),"no login");
             <nav class="l">
                 <ul>
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
-                    <li class="firstNav"><a href="./logout.php">Logout</a></li>
-                    <li class="firstNav"><a href="./reset.php">Reset password</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>
             <div class="box1 l">
-                <h1 class="text-left mt0">POST CSRF </h1>
+                <h1 class="text-left mt0">GET CSRF </h1>
                 <h3>Only the man who is admin can do something...</h3>
+                </br>
+                <h3>Input the content and admin will see:</h3>
+                <form action="result.php">
+                <textarea name="url" style="width:300px;height:100px;"></textarea>
+                 <input type="submit" value="submit">
+                </form>
             </div>
         </div>
          
@@ -44,3 +46,4 @@ assert(isset($_SESSION['username']),"no login");
     
   </body>
 </html>
+<!--flag.php-->

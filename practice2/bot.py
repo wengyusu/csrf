@@ -1,7 +1,8 @@
 from ghost import Ghost
-from pyvirtualdisplay import Display
 import sys
 import os
+
+from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800,800))
 display.start()
 ghost = Ghost()

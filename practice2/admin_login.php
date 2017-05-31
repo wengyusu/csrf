@@ -1,8 +1,4 @@
-<?php  require_once "config.php"; 
-assert($_SERVER['SCRIPT_NAME'] == "/csrf/practice2/login.php","assertion failed");
-assert(!isset($_SESSION['username']),"");
-// echo $_SESSION['username'];
-?>
+<?php  require_once "config.php";  ?>
 <html>
       <head>
       <title>Login</title>
@@ -19,11 +15,11 @@ assert(!isset($_SESSION['username']),"");
 <form action="confirm.php" method="POST">
   <div>
     <label for="exampleInputName2">Username:</label>
-    <input type="text" class="form-control" id="username" name="username" value="test">
+    <input type="text" class="form-control" id="username" name="username">
   </div>
   <div>
     <label for="exampleInputName2">Password:</label>
-    <input type="password" class="form-control" id="password" name="password" value="test">
+    <input type="password" class="form-control" id="password" name="password">
   </div>
   <button class="btn btn-default">Sign in</button>
   </form>

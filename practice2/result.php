@@ -31,4 +31,4 @@ if($status == 'succeed'){
     // unlink($filename);
 }
 else
-    echo "Fatal error";
+    die("Fatal error");
