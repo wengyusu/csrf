@@ -1,4 +1,5 @@
 <?php
+require_once "config.php"
 if(!isset($_GET['url']))
     die('Error');
 
@@ -23,7 +24,6 @@ $content = "<html>
 // else
 //     echo "fatal error";
 $filename="result/".md5(time()).".html";
-file_put_contents($filename,$content);
 file_put_contents($filename,$content);
 $dir=dirname($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 // echo "python3 bot.py http://{$dir} {$filename}";

