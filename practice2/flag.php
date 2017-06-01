@@ -1,9 +1,9 @@
 <?php
  require_once "config.php"; 
-$flag='flag{g3t_c3rf3e333}';
-if(isset($_FILE)){
-    if(isset($_SESSION['admin'])){
-        if($_SESSION['admin']){
+$flag='flag{p03t_c3rf3e333}';
+if(@isset($_FILES)){
+    if(isset($_SESSION['admin2'])){
+        if($_SESSION['admin2']){
             echo $flag;
         }
     }

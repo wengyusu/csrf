@@ -24,10 +24,12 @@ $content = "<html>
 // else
 //     echo "fatal error";
 $filename="result/".md5(time()).".html";
+$bot_admin='admin';
+$bot_password='6965bbadaa25af2e23816c3d9194301c';
 file_put_contents($filename,$content);
 $dir=dirname($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 // echo "python3 bot.py http://{$dir} {$filename}";
-exec("python3 bot.py http://{$dir} {$filename}",$status);
+exec("python3 bot.py http://{$dir} {$filename} {$bot_admin} {$bot_password}",$status);
 if($status[0] == 'succeed'){
     echo $content;
     unlink($filename);
