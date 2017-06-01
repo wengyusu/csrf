@@ -22,7 +22,6 @@
                          <li class="secondeNav"><a href="./practice/16.2.default_menu_horizontal.swf?xml_path=custom_menu.xml">XSS Jplayer</a></li>
                          <li class="secondeNav"><a href="./practice/15.swfupload.swf?movieName=9">XSS Swfupload</a></li> -->
                     </details>
-                    <li class="firstNav"><a href="./gallery.html">Gallery</a></li>
                     <li class="firstNav"><a href="./about.php">About</a></li>
                 </ul>
             </nav>
