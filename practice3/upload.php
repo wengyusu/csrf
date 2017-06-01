@@ -21,7 +21,7 @@ $html='
     <div class="container" style="margin-top:15%;width:600px;">
 
 <h3 class="col-md-offset-4">Upload</h3>
-<div class="panel panel-default" style="margin:300 auto;width:600px;">
+<div class="panel panel-default" style="width:600px;">
   <div class="panel-body">
     <form role="form" action = "" enctype="multipart/form-data" method="POST">
       <div class="form-group col-md-offset-4 ">
@@ -46,22 +46,28 @@ header("Access-Control-Allow-Origin:*");
 // session_start();
 // var_dump($_FILES);
 if(@isset($_FILES["file"]) && $_FILES["file"]["name"]!=""){
-    if(isset($_POST['csrf-token']) && $_POST['csrf-token']==$_COOKIE['csrf-token'] &&  @$_SESSION['admin']){
-    if ($_FILES["file"]["error"] > 0){
-        echo "错误：: " . $_FILES["file"]["error"] . "<br>";
-    }
-    else{
-        echo "CNSS{csrf_t0ken_bypa33}";
-    }
-    }
-    elseif ($_POST['csrf-token']!=$_COOKIE['csrf-token']) {
-        echo $html;
-        echo "<script>alert('error')</script>";
-    }
-    else{
-        echo $html;
-        echo "<script>alert('No permission')</script>";
+    if(isset($_POST['csrf-token'])){
+        // echo $_POST['csrf-token'];
+        if ($_FILES["file"]["error"] > 0){
+            echo "错误：: " . $_FILES["file"]["error"] . "<br>";
         }
+        elseif($_COOKIE['csrf-token'] == $_POST['csrf-token']){
+            if(isset($_SESSION['admin']) && $_SESSION['admin'])
+            echo "flag{c0r3_c3rf_ea3y}";
+            else{
+                echo $html;
+                echo "<script>alert('No permission!')</script>";
+            }
+        }
+        else{
+            echo $html;
+            echo "<script>alert('Don't hack me!')</script>";
+        }
+    }
+    else{
+        echo "<script>alert('error')</script>";
+        echo $html;
+    }
 }
 else{
         echo $html;

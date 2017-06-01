@@ -27,9 +27,10 @@ $domain=MAIN_DOMAIN.HOST;
 $path='/';
 $secure=false;
 $httponly=true;
-if(!isset($_COOKIE['csrf-token'])){
-    $_COOKIE['csrf-token']=$token;
-  setcookie('csrf-token', $token,time()+600,  $path,$domain, $secure, $httponly); 
-}
+
+// $_COOKIE['csrf-token']=$token;
+
+
+
 
 

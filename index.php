@@ -12,10 +12,10 @@
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
                     <details open>
                          <summary>Questions</summary>
-                         <li class="secondeNav"><a href="./practice/topic1.php?name=1">Get CSRF</a></li>
-                         <li class="secondeNav"><a href="./practice/topic2.php?name=2">Post CSRF</a></li>
-                         <li class="secondeNav"><a href="./practice3/index.php">CORS CSRF</a></li>
-                         <li class="secondeNav"><a href="./practice/topic4.php?name=4">修改cookie导致CSRF</a></li>
+                         <li class="secondeNav"><a href="./practic1e/">Get CSRF</a></li>
+                         <li class="secondeNav"><a href="./practice2/">Post CSRF</a></li>
+                         <li class="secondeNav"><a href="./practice3/">CORS CSRF</a></li>
+                         <li class="secondeNav"><a href="./practice4/">子域修改cookie导致CSRF</a></li>
 <!--                          <li class="secondeNav"><a href="./practice/topic5.php">XSS输出在textarea中</a></li>
                          <li class="secondeNav"><a href="./practice/topic6.php?name=6">XSS通过innerHTML输出</a></li>
                          <li class="secondeNav"><a href="./practice/topic7.php">XSS通过eval执行的情况</a></li>
