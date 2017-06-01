@@ -12,7 +12,7 @@
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
                     <details open>
                          <summary>Questions</summary>
-                         <li class="secondeNav"><a href="./practic1e/">Get CSRF</a></li>
+                         <li class="secondeNav"><a href="./practice1/">Get CSRF</a></li>
                          <li class="secondeNav"><a href="./practice2/">Post CSRF</a></li>
                          <li class="secondeNav"><a href="./practice3/">CORS CSRF</a></li>
                          <li class="secondeNav"><a href="./practice4/">子域修改cookie导致CSRF</a></li>
