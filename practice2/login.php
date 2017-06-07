@@ -1,13 +1,3 @@
-<?php
-
-require_once "config.php";
-
-
-// var_dump($_SESSION);
-
-setcookie('csrf-token', $token,time()+600,  $path,$domain, $secure, $httponly); 
-$_COOKIE['csrf-token']=$token;
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,16 +29,15 @@ $_COOKIE['csrf-token']=$token;
             </nav>
             <div class="line l"></div>
             <div class="box1 l">
-<a class="btn btn-default col-md-offset-10" href="logout.php">logout</a>
-<h3 class="col-md-offset-4">Upload</h3>
 <panel class="panel panel-default">
-    <form action = "check.php" enctype="multipart/form-data" method="POST">
-        <h4>File input(不超过200K)</h4>
+    <form action = "confirm.php" enctype="multipart/form-data" method="POST">
+        <h4>Login</h4>
         </br>
-        <input type="file" name="file" id="file"></br>
-      <input type="hidden" name="csrf-token" value="<?=$_COOKIE['csrf-token']?>" >
+        Username:<input type="text" name="username" value="test">
       </br>
-    <button type="submit" class="col-md-offset-4 btn btn-info">提交</button>
+      </br>
+      Password: <input type="password" name="password" value="test"></br>
+    <button type="submit" class="col-md-offset-4 btn btn-info" style="margin-left:15%;">提交</button>
 </panel>
             </div>
         </div>
@@ -61,4 +50,3 @@ $_COOKIE['csrf-token']=$token;
     
   </body>
 </html>
-

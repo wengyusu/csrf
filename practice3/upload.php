@@ -6,32 +6,57 @@ require_once "config.php";
 // var_dump($_SESSION);
 $html='
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="//cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Upload</title>
-</head>
-<body>
-     <a class="btn btn-default col-md-offset-10" href="logout.php">logout</a>
-    <div class="container" style="margin-top:15%;width:600px;">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>子域修改cookie导致CSRF</title>
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/typo.css" rel="stylesheet">    
+    <link href="../assets/css/changeV1.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
+  <body>
+
+    <!--main content start-->
+    <section class="container typo">
+        <div class="content">
+            <nav class="l">
+                <ul>
+                    <li class="firstNav active"><a href="./index.php">Index</a></li>
+                    <!--<details open>-->
+                         <!--<summary>Questions</summary>-->
+                    <li class="firstNav"><a href="upload.php">Upload</a></li>
+                </ul>
+            </nav>
+            <div class="line l"></div>
+            <div class="box1 l">
+<a class="btn btn-default col-md-offset-10" href="logout.php">logout</a>
 <h3 class="col-md-offset-4">Upload</h3>
-<div class="panel panel-default" style="width:600px;">
-  <div class="panel-body">
-    <form role="form" action = "" enctype="multipart/form-data" method="POST">
-      <div class="form-group col-md-offset-4 ">
-        <label for="exampleInputFile">File input(不超过200K)</label>
-        <input type="file" name="file" id="file"><br>
-      </div>
-      <input type="hidden" name="csrf-token" value="'.$_COOKIE['csrf-token'].'" >
+<panel class="panel panel-default">
+    <form action = "check.php" enctype="multipart/form-data" method="POST">
+        <h4>File input(不超过200K)</h4>
+        </br>
+        <input type="file" name="file" id="file"></br>
+      <input type="hidden" name="csrf-token" value="<?=$_COOKIE['csrf-token']?>" >
+      </br>
     <button type="submit" class="col-md-offset-4 btn btn-info">提交</button>
-</div>
-</body>
+</panel>
+            </div>
+        </div>
+         
+    </section>
+
+      <!--main content end-->  
+
+      <p class="footer-logo">Powered by <a href="#">TwoSecurity</a></p>
+    
+  </body>
 </html>';
 if(defined("HOST") && defined("SUB_DOMAIN")){
     header("Access-Control-Allow-Origin:http://".SUB_DOMAIN.HOST);
