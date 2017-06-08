@@ -13,7 +13,5 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     }
     else{
         echo "帐户或密码不正确";
-        sleep(2);
-        header("Location:login.php");
     }
 }

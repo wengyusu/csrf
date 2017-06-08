@@ -1,4 +1,9 @@
-<?php require_once "config.php" ?>
+<?php
+ require_once "config.php";
+ if(!isset($_SESSION['admin3'])){
+    header("Location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,6 +31,7 @@
                     <!--<details open>-->
                          <!--<summary>Questions</summary>-->
                     <li class="firstNav"><a href="upload.php">Upload</a></li>
+                    <li class="firstNav"><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>

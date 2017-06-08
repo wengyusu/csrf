@@ -1,3 +1,8 @@
+<?php
+require "config.php";
+if(isset($_SESSION['admin3']))
+    header('Location:index.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +29,6 @@
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
                     <!--<details open>-->
                          <!--<summary>Questions</summary>-->
-                    <li class="firstNav"><a href="upload.php">Upload</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>

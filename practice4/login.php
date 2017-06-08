@@ -1,3 +1,7 @@
+<?php
+if(isset($_SESSION['admin3']))
+    header('Location:index.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,10 +25,9 @@
         <div class="content">
             <nav class="l">
                 <ul>
-                    <li class="firstNav active"><a href="./index.php">Index</a></li>
+                    <li class="firstNav active"><a href="./index.php">Login</a></li>
                     <!--<details open>-->
                          <!--<summary>Questions</summary>-->
-                    <li class="firstNav"><a href="upload.php">Upload</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>
