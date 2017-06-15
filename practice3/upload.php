@@ -9,7 +9,7 @@ $html='
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>子域修改cookie导致CSRF</title>
+    <title>CORS CSRF</title>
     <!-- Custom styles for this template -->
     <link href="../assets/css/typo.css" rel="stylesheet">    
     <link href="../assets/css/changeV1.css" rel="stylesheet">
@@ -31,7 +31,8 @@ $html='
                     <li class="firstNav active"><a href="./index.php">Index</a></li>
                     <!--<details open>-->
                          <!--<summary>Questions</summary>-->
-                    <li class="firstNav"><a href="upload.php">Upload</a></li>
+                    <li class="firstNav"><a href="./upload.php">Upload</a></li>
+                    <li class="firstNav"><a href="./logout.php">Logout</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>
@@ -39,11 +40,11 @@ $html='
 <a class="btn btn-default col-md-offset-10" href="logout.php">logout</a>
 <h3 class="col-md-offset-4">Upload</h3>
 <panel class="panel panel-default">
-    <form action = "check.php" enctype="multipart/form-data" method="POST">
+    <form action = "" enctype="multipart/form-data" method="POST">
         <h4>File input(不超过200K)</h4>
         </br>
         <input type="file" name="file" id="file"></br>
-      <input type="hidden" name="csrf-token" value="<?=$_COOKIE['csrf-token']?>" >
+      <input type="hidden" name="csrf-token" value="'.$_COOKIE['csrf-token'].'" >
       </br>
     <button type="submit" class="col-md-offset-4 btn btn-info">提交</button>
 </panel>
@@ -77,16 +78,17 @@ if(@isset($_FILES["file"]) && $_FILES["file"]["name"]!=""){
             echo "错误：: " . $_FILES["file"]["error"] . "<br>";
         }
         elseif($_COOKIE['csrf-token'] == $_POST['csrf-token']){
-            if(isset($_SESSION['admin']) && $_SESSION['admin'])
+            if(isset($_SESSION['admin3']) && $_SESSION['admin3'])
             echo "flag{c0r3_c3rf_ea3y}";
             else{
-                echo $html;
                 echo "<script>alert('No permission!')</script>";
+                echo $html;
+
             }
         }
         else{
-            echo $html;
             echo "<script>alert('Don't hack me!')</script>";
+            echo $html;
         }
     }
     else{

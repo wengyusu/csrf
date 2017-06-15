@@ -6,10 +6,11 @@ if(@isset($_FILES)){
         if($_SESSION['admin2']){
             echo $flag;
         }
-    }
-    else{
+        else{
         echo "No permission";
+        }
     }
+
 }
 else{
     die("Please post me a file");;

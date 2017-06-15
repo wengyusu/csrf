@@ -3,8 +3,8 @@ import sys
 import os
 from pyvirtualdisplay import Display
 
-display = Display(visible=0, size=(800, 800))
-display.start()
+# display = Display(visible=0, size=(800, 800))
+# display.start()
 ghost = Ghost()
 with ghost.start() as session:
     session.open("{0}/confirm.php".format(sys.argv[1]), method='post', body="username={0}&password={1}".format(sys.argv[3],sys.argv[4]))

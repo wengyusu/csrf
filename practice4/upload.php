@@ -35,11 +35,11 @@ $_COOKIE['csrf-token']=$token;
                     <!--<details open>-->
                          <!--<summary>Questions</summary>-->
                     <li class="firstNav"><a href="upload.php">Upload</a></li>
+                    <li class="firstNav"><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
             <div class="line l"></div>
             <div class="box1 l">
-<a class="btn btn-default col-md-offset-10" href="logout.php">logout</a>
 <h3 class="col-md-offset-4">Upload</h3>
 <panel class="panel panel-default">
     <form action = "check.php" enctype="multipart/form-data" method="POST">
